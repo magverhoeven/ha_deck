@@ -7,7 +7,7 @@
 #define SPI_FREQUENCY 15000000
 #define TFT_WIDTH 1024
 #define TFT_HEIGHT 600
-#define TFT_BCKL 39
+#define TFT_BCKL 10
 #define TFT_CS 10
 #define TFT_SCLK 12
 #define TFT_MOSI 11
