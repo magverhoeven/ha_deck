@@ -10,6 +10,7 @@
 #define TFT_BCKL 39
 #define TFT_CS 10
 #define TFT_SCLK 12
+
 #define TFT_MOSI 11
 #define TFT_DE 40
 #define TFT_VSYNC 41
