@@ -1,4 +1,4 @@
-#include "hd_device_wt32s3_86s.h"
+#include "hd_device_matouch7inch.h"
 #include <vector>
 
 namespace esphome {

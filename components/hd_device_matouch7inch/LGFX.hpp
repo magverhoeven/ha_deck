@@ -5,38 +5,38 @@
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 
 #define SPI_FREQUENCY 15000000
-#define TFT_WIDTH 480
-#define TFT_HEIGHT 480
-#define TFT_BCKL 5
-#define TFT_CS 38
-#define TFT_SCLK 45
-#define TFT_MOSI 48
+#define TFT_WIDTH 1024
+#define TFT_HEIGHT 600
+// #define TFT_BCKL 5
+// #define TFT_CS 38
+// #define TFT_SCLK 45
+#define TFT_MOSI 11
 #define TFT_DE 40
 #define TFT_VSYNC 41
-#define TFT_HSYNC 42
-#define TFT_PCLK 39
-#define TFT_D0 45
-#define TFT_D1 48
-#define TFT_D2 47
-#define TFT_D3 0
-#define TFT_D4 21
-#define TFT_D5 14
-#define TFT_D6 13
-#define TFT_D7 12
-#define TFT_D8 11
-#define TFT_D9 16
-#define TFT_D10 17
-#define TFT_D11 18
-#define TFT_D12 8
-#define TFT_D13 3
-#define TFT_D14 46
-#define TFT_D15 10
+#define TFT_HSYNC 39
+#define TFT_PCLK 42
+#define TFT_D0 8   //  B0
+#define TFT_D1 3   //  B1
+#define TFT_D2 46  //  B2
+#define TFT_D3 9   //  B3
+#define TFT_D4 1   //  B4
+#define TFT_D5 5   //  G0
+#define TFT_D6 6   //  G1
+#define TFT_D7 7   //  G2
+#define TFT_D8 15  //  G3
+#define TFT_D9 16  //  G4
+#define TFT_D10 4  //  G5
+#define TFT_D11 45 //  R0
+#define TFT_D12 48 //  R1
+#define TFT_D13 47 //  R2
+#define TFT_D14 21 //  R3
+#define TFT_D15 14 //  R4
 #define BACKLIGHT_FREQUENCY 1000
 #define I2C_TOUCH_FREQUENCY 400000
-#define TOUCH_SDA 15
-#define TOUCH_SCL 6
-#define TOUCH_IRQ 4
-#define TOUCH_RST -1
+#define TOUCH_SDA 17
+#define TOUCH_SCL 18
+#define TOUCH_IRQ 2
+#define TOUCH_RST 3
 
 namespace esphome {
 namespace hd_device {
@@ -101,19 +101,19 @@ public:
       cfg.pin_vsync = TFT_VSYNC;
       cfg.pin_hsync = TFT_HSYNC;
       cfg.pin_pclk = TFT_PCLK;
-      cfg.freq_write = 15000000;
+      cfg.freq_write = 16000000;
 
       cfg.hsync_polarity = 1;
-      cfg.hsync_front_porch = 8;
-      cfg.hsync_pulse_width = 10;
-      cfg.hsync_back_porch = 50;
+      cfg.hsync_front_porch = 40;
+      cfg.hsync_pulse_width = 48;
+      cfg.hsync_back_porch = 128;
       cfg.vsync_polarity = 1;
-      cfg.vsync_front_porch = 8;
-      cfg.vsync_pulse_width = 10;
-      cfg.vsync_back_porch = 20;
+      cfg.vsync_front_porch = 13;
+      cfg.vsync_pulse_width = 3;
+      cfg.vsync_back_porch = 45;
       cfg.pclk_idle_high = 0;
       cfg.de_idle_high = 0;
-      cfg.pclk_active_neg = 0;
+      cfg.pclk_active_neg = 1;
 
       _bus_instance.config(cfg);
     }
