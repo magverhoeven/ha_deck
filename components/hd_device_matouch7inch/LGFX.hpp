@@ -70,9 +70,9 @@ public:
     {
       auto cfg = _panel_instance.config_detail();
 
-      cfg.pin_cs = 10;
-      cfg.pin_sclk = 12;
-      cfg.pin_mosi = 11;
+      cfg.pin_cs = TFT_CS;
+      cfg.pin_sclk = TFT_SCLK;
+      cfg.pin_mosi = TFT_MOSI;
 
       _panel_instance.config_detail(cfg);
     }
