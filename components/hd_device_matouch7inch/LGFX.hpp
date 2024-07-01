@@ -10,7 +10,6 @@
 #define TFT_BCKL 39
 #define TFT_CS 10
 #define TFT_SCLK 12
-
 #define TFT_MOSI 11
 #define TFT_DE 40
 #define TFT_VSYNC 41
@@ -71,9 +70,9 @@ public:
     {
       auto cfg = _panel_instance.config_detail();
 
-      cfg.pin_cs = TFT_CS;
-      cfg.pin_sclk = TFT_SCLK;
-      cfg.pin_mosi = TFT_MOSI;
+      cfg.pin_cs = 10;
+      cfg.pin_sclk = 12;
+      cfg.pin_mosi = 11;
 
       _panel_instance.config_detail(cfg);
     }
