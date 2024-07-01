@@ -5,8 +5,8 @@
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 
-#define TFT_WIDTH 800
-#define TFT_HEIGHT 480
+#define TFT_WIDTH 1024
+#define TFT_HEIGHT 600
 
 namespace esphome {
 namespace hd_device {
